@@ -1,0 +1,15 @@
+create procedure categoryUser
+as
+select UserID, FirstName,LastName,Email,Password from tblRegister
+where Category = 'User' 
+go
+
+exec categoryUser
+
+create procedure categoryLibrarian
+as
+select UserID, FirstName,LastName,Email,Password from tblRegister
+where Category = 'Librarian' 
+go
+
+exec categoryLibrarian
